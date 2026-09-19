@@ -2,13 +2,15 @@ import { defineConfig, devices } from '@playwright/test';
 import { config } from './config/env.config';
 
 
+
 export default defineConfig({
   testDir: './tests',
   fullyParallel: true,
   retries: process.env.CI ? 1 : 0,
   workers: process.env.CI ? 4 : undefined,
 
-  reporter: [['html'], ['allure-playwright']],
+  reporter: [['html'], ['allure-playwright'],
+    ['line'], ['allure-playwright', { outputFolder: 'allure-results' }]],
 
   use: {
     testIdAttribute: 'data-test',

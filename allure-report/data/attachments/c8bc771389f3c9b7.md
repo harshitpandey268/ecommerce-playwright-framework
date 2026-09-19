@@ -1,0 +1,24 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: e2e/02-inventory.spec.ts >> Inventory >> removes an item from the products page
+- Location: tests/e2e/02-inventory.spec.ts:35:7
+
+# Error details
+
+```
+Error: browserType.launch: Executable doesn't exist at /home/akitra/.cache/ms-playwright/firefox-1543/firefox/firefox
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     npx playwright install                                 ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝
+```
