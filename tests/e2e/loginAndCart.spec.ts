@@ -7,7 +7,7 @@ test.describe('Login and cart functionality', () => {
     page,
   }) => {
     await loginPage.navigate();
-    await loginPage.login(config.username, config.password);
+    await loginPage.login(config.users.standard, config.password);
 
     await expect(page).toHaveURL(/inventory\.html/);
     await expect(page.getByText('Products')).toBeVisible();
@@ -19,7 +19,7 @@ test.describe('Login and cart functionality', () => {
     navbar,
   }) => {
     await loginPage.navigate();
-    await loginPage.login(config.username, config.password);
+    await loginPage.login(config.users.standard, config.password);
 
     const initialCount = await navbar.getCartItemCount();
 

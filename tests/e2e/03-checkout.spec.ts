@@ -4,7 +4,7 @@ import { expect, test } from '../../utils/customFixtures';
 test.describe('Checkout', () => {
   test.beforeEach(async ({ loginPage, page }) => {
     await loginPage.navigate();
-    await loginPage.login(config.username, config.password);
+    await loginPage.login(config.users.standard, config.password);
     await expect(page).toHaveURL(/inventory\.html/);
   });
 
